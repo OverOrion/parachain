@@ -42,7 +42,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 			.saturating_add(T::DbWeight::get().reads(2))
 			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(p as Weight)))
 			.saturating_add(T::DbWeight::get().writes(2))
-			.saturating_add(T::DbWeight::get().writes((1 as Weight).saturating_mul(p as Weight)))
+			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(p.into())))
 	}
 	// Storage: Council Members (r:1 w:0)
 	fn execute(_b: u32, m: u32, ) -> Weight {
