@@ -41,7 +41,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(4).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(4).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:1 w:1)
@@ -59,7 +60,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(3).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(3).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:2 w:2)
@@ -76,7 +78,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(3).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(3).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:1 w:1)
@@ -93,7 +96,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(2).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(2).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:2 w:2)
@@ -110,7 +114,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(2))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(1).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:2 w:2)
@@ -139,7 +144,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(2).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(2).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:2 w:2)
@@ -154,7 +160,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(1).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:1 w:1)
@@ -166,7 +173,8 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
-				T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.writes(Weight::from_ref_time(1).saturating_mul(s.into()).ref_time()),
 			)
 	}
 	// Storage: Scheduler Agenda (r:1 w:1)
