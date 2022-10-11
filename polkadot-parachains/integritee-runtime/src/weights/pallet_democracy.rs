@@ -154,7 +154,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 			// Standard Error: 74_000
 			.saturating_add(Weight::from_ref_time(19_325_000).saturating_mul(r.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
-			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
+			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r.into())))
 			.saturating_add(T::DbWeight::get().writes(1))
 	}
 	// Storage: Democracy LowestUnbaked (r:1 w:1)
@@ -168,7 +168,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 			// Standard Error: 84_000
 			.saturating_add(Weight::from_ref_time(19_941_000).saturating_mul(r.into()))
 			.saturating_add(T::DbWeight::get().reads(5))
-			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
+			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r.into())))
 			.saturating_add(T::DbWeight::get().writes(1))
 	}
 	// Storage: Democracy VotingOf (r:3 w:3)
@@ -179,7 +179,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 			// Standard Error: 99_000
 			.saturating_add(Weight::from_ref_time(22_120_000).saturating_mul(r.into()))
 			.saturating_add(T::DbWeight::get().reads(4))
-			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
+			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r.into())))
 			.saturating_add(T::DbWeight::get().writes(4))
 			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(r.into()).ref_time()))
 	}
@@ -190,7 +190,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 			// Standard Error: 67_000
 			.saturating_add(Weight::from_ref_time(22_971_000).saturating_mul(r.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
-			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
+			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r.into())))
 			.saturating_add(T::DbWeight::get().writes(2))
 			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(r.into()).ref_time()))
 	}
