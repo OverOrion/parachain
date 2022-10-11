@@ -34,7 +34,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Voting (r:100 w:100)
 	// Storage: Council Prime (r:0 w:1)
 	fn set_members(m: u32, _n: u32, p: u32, ) -> Weight {
-		(0 as Weight)
+		Weight::from_ref_time(0)
 			// Standard Error: 134_000
 			.saturating_add((17_813_000 as Weight).saturating_mul(m as Weight))
 			// Standard Error: 134_000
@@ -46,7 +46,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	}
 	// Storage: Council Members (r:1 w:0)
 	fn execute(_b: u32, m: u32, ) -> Weight {
-		(77_486_000 as Weight)
+		Weight::from_ref_time(77_486_000)
 			// Standard Error: 7_000
 			.saturating_add((94_000 as Weight).saturating_mul(m as Weight))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
@@ -54,7 +54,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Members (r:1 w:0)
 	// Storage: Council ProposalOf (r:1 w:0)
 	fn propose_execute(b: u32, m: u32, ) -> Weight {
-		(60_805_000 as Weight)
+		Weight::from_ref_time(60_805_000)
 			// Standard Error: 0
 			.saturating_add((7_000 as Weight).saturating_mul(b as Weight))
 			// Standard Error: 7_000
@@ -67,7 +67,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council ProposalCount (r:1 w:1)
 	// Storage: Council Voting (r:0 w:1)
 	fn propose_proposed(b: u32, m: u32, p: u32, ) -> Weight {
-		(73_221_000 as Weight)
+		Weight::from_ref_time(73_221_000)
 			// Standard Error: 1_000
 			.saturating_add((18_000 as Weight).saturating_mul(b as Weight))
 			// Standard Error: 13_000
@@ -80,7 +80,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Members (r:1 w:0)
 	// Storage: Council Voting (r:1 w:1)
 	fn vote(m: u32, ) -> Weight {
-		(109_367_000 as Weight)
+		Weight::from_ref_time(109_367_000)
 			// Standard Error: 16_000
 			.saturating_add((148_000 as Weight).saturating_mul(m as Weight))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
@@ -91,7 +91,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Proposals (r:1 w:1)
 	// Storage: Council ProposalOf (r:0 w:1)
 	fn close_early_disapproved(m: u32, p: u32, ) -> Weight {
-		(93_407_000 as Weight)
+		Weight::from_ref_time(93_407_000)
 			// Standard Error: 13_000
 			.saturating_add((218_000 as Weight).saturating_mul(m as Weight))
 			// Standard Error: 12_000
@@ -104,7 +104,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council ProposalOf (r:1 w:1)
 	// Storage: Council Proposals (r:1 w:1)
 	fn close_early_approved(b: u32, m: u32, p: u32, ) -> Weight {
-		(100_328_000 as Weight)
+		Weight::from_ref_time(100_328_000)
 			// Standard Error: 2_000
 			.saturating_add((28_000 as Weight).saturating_mul(b as Weight))
 			// Standard Error: 18_000
@@ -120,7 +120,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Proposals (r:1 w:1)
 	// Storage: Council ProposalOf (r:0 w:1)
 	fn close_disapproved(m: u32, p: u32, ) -> Weight {
-		(104_976_000 as Weight)
+		Weight::from_ref_time(104_976_000)
 			// Standard Error: 15_000
 			.saturating_add((271_000 as Weight).saturating_mul(m as Weight))
 			// Standard Error: 14_000
@@ -134,7 +134,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council ProposalOf (r:1 w:1)
 	// Storage: Council Proposals (r:1 w:1)
 	fn close_approved(b: u32, m: u32, p: u32, ) -> Weight {
-		(133_170_000 as Weight)
+		Weight::from_ref_time(133_170_000)
 			// Standard Error: 2_000
 			.saturating_add((20_000 as Weight).saturating_mul(b as Weight))
 			// Standard Error: 19_000
@@ -148,7 +148,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	// Storage: Council Voting (r:0 w:1)
 	// Storage: Council ProposalOf (r:0 w:1)
 	fn disapprove_proposal(p: u32, ) -> Weight {
-		(51_161_000 as Weight)
+		Weight::from_ref_time(51_161_000)
 			// Standard Error: 15_000
 			.saturating_add((805_000 as Weight).saturating_mul(p as Weight))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))

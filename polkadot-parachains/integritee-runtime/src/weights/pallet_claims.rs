@@ -36,7 +36,7 @@ impl<T: frame_system::Config> pallet_claims::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:0)
 	// Storage: Balances Locks (r:1 w:1)
 	fn claim() -> Weight {
-		(1_124_251_000 as Weight)
+		Weight::from_ref_time(1_124_251_000)
 			.saturating_add(T::DbWeight::get().reads(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes(6 as Weight))
 	}
@@ -45,7 +45,7 @@ impl<T: frame_system::Config> pallet_claims::WeightInfo for WeightInfo<T> {
 	// Storage: Claims Claims (r:0 w:1)
 	// Storage: Claims Signing (r:0 w:1)
 	fn mint_claim() -> Weight {
-		(28_897_000 as Weight)
+		Weight::from_ref_time(28_897_000)
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -57,7 +57,7 @@ impl<T: frame_system::Config> pallet_claims::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:0)
 	// Storage: Balances Locks (r:1 w:1)
 	fn claim_attest() -> Weight {
-		(895_011_000 as Weight)
+		Weight::from_ref_time(895_011_000)
 			.saturating_add(T::DbWeight::get().reads(7 as Weight))
 			.saturating_add(T::DbWeight::get().writes(6 as Weight))
 	}
@@ -70,7 +70,7 @@ impl<T: frame_system::Config> pallet_claims::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:0)
 	// Storage: Balances Locks (r:1 w:1)
 	fn attest() -> Weight {
-		(307_898_000 as Weight)
+		Weight::from_ref_time(307_898_000)
 			.saturating_add(T::DbWeight::get().reads(8 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -79,7 +79,7 @@ impl<T: frame_system::Config> pallet_claims::WeightInfo for WeightInfo<T> {
 	// Storage: Claims Signing (r:1 w:2)
 	// Storage: Claims Preclaims (r:1 w:1)
 	fn move_claim() -> Weight {
-		(86_753_000 as Weight)
+		Weight::from_ref_time(86_753_000)
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}

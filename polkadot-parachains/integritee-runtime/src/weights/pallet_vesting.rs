@@ -31,7 +31,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Vesting Vesting (r:1 w:1)
 	// Storage: Balances Locks (r:1 w:1)
 	fn vest_locked(l: u32, s: u32, ) -> Weight {
-		(106_197_000 as Weight)
+		Weight::from_ref_time(106_197_000)
 			// Standard Error: 46_000
 			.saturating_add((544_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 95_000
@@ -42,7 +42,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Vesting Vesting (r:1 w:1)
 	// Storage: Balances Locks (r:1 w:1)
 	fn vest_unlocked(l: u32, s: u32, ) -> Weight {
-		(101_309_000 as Weight)
+		Weight::from_ref_time(101_309_000)
 			// Standard Error: 51_000
 			.saturating_add((821_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 105_000
@@ -54,7 +54,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Balances Locks (r:1 w:1)
 	// Storage: System Account (r:1 w:1)
 	fn vest_other_locked(l: u32, s: u32, ) -> Weight {
-		(111_156_000 as Weight)
+		Weight::from_ref_time(111_156_000)
 			// Standard Error: 51_000
 			.saturating_add((318_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 105_000
@@ -66,7 +66,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Balances Locks (r:1 w:1)
 	// Storage: System Account (r:1 w:1)
 	fn vest_other_unlocked(l: u32, _s: u32, ) -> Weight {
-		(147_469_000 as Weight)
+		Weight::from_ref_time(147_469_000)
 			// Standard Error: 52_000
 			.saturating_add((207_000 as Weight).saturating_mul(l as Weight))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
@@ -76,7 +76,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:1 w:1)
 	// Storage: Balances Locks (r:1 w:1)
 	fn vested_transfer(l: u32, _s: u32, ) -> Weight {
-		(181_754_000 as Weight)
+		Weight::from_ref_time(181_754_000)
 			// Standard Error: 89_000
 			.saturating_add((888_000 as Weight).saturating_mul(l as Weight))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
@@ -86,7 +86,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: System Account (r:2 w:2)
 	// Storage: Balances Locks (r:1 w:1)
 	fn force_vested_transfer(l: u32, s: u32, ) -> Weight {
-		(164_733_000 as Weight)
+		Weight::from_ref_time(164_733_000)
 			// Standard Error: 78_000
 			.saturating_add((367_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 160_000
@@ -98,7 +98,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Balances Locks (r:1 w:1)
 	// Storage: System Account (r:1 w:1)
 	fn not_unlocking_merge_schedules(l: u32, s: u32, ) -> Weight {
-		(103_096_000 as Weight)
+		Weight::from_ref_time(103_096_000)
 			// Standard Error: 51_000
 			.saturating_add((256_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 109_000
@@ -110,7 +110,7 @@ impl<T: frame_system::Config> pallet_vesting::WeightInfo for WeightInfo<T> {
 	// Storage: Balances Locks (r:1 w:1)
 	// Storage: System Account (r:1 w:1)
 	fn unlocking_merge_schedules(l: u32, s: u32, ) -> Weight {
-		(125_159_000 as Weight)
+		Weight::from_ref_time(125_159_000)
 			// Standard Error: 54_000
 			.saturating_add((398_000 as Weight).saturating_mul(l as Weight))
 			// Standard Error: 116_000
