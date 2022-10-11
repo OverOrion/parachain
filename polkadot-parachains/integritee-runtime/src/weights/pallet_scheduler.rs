@@ -36,7 +36,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(34_670_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(3).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(3).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
@@ -53,7 +55,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(26_386_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(2).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(2).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
@@ -69,7 +73,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(28_925_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(3).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(3).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
@@ -85,7 +91,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(23_857_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(2).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(2).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
@@ -101,7 +109,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(11_728_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(1).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(2))
 			.saturating_add(
@@ -116,7 +126,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(6_378_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(1).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(2))
 	}
@@ -128,7 +140,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(17_932_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(1).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
@@ -142,7 +156,9 @@ impl<T: frame_system::Config> pallet_scheduler::WeightInfo for WeightInfo<T> {
 			.saturating_add(Weight::from_ref_time(11_982_000).saturating_mul(s.into()))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(
-				T::DbWeight::get().reads(Weight::from_ref_time(1).saturating_mul(s.into())),
+				T::DbWeight::get()
+					.reads(Weight::from_ref_time(1).saturating_mul(s.into()))
+					.ref_time(),
 			)
 			.saturating_add(T::DbWeight::get().writes(1))
 			.saturating_add(
