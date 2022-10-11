@@ -67,7 +67,7 @@ impl<T: frame_system::Config> pallet_treasury::WeightInfo for WeightInfo<T> {
 			.saturating_add(T::DbWeight::get().reads(2))
 			.saturating_add(T::DbWeight::get().reads((3 as Weight).saturating_mul(p as Weight)))
 			.saturating_add(T::DbWeight::get().writes(2))
-			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(3).saturating_mul(p.into())))
+			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(3).saturating_mul(p.into()).ref_time()))
 	}
 	fn spend() -> Weight {
 		Weight::from_ref_time(86_799_000)
