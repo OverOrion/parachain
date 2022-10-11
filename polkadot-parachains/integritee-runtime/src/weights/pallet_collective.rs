@@ -56,7 +56,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	fn propose_execute(b: u32, m: u32, ) -> Weight {
 		Weight::from_ref_time(60_805_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(7_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(7_000).saturating_mul(b.into()))
 			// Standard Error: 7_000
 			.saturating_add(Weight::from_ref_time(146_000).saturating_mul(m))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
@@ -69,7 +69,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	fn propose_proposed(b: u32, m: u32, p: u32, ) -> Weight {
 		Weight::from_ref_time(73_221_000)
 			// Standard Error: 1_000
-			.saturating_add(Weight::from_ref_time(18_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(18_000).saturating_mul(b.into()))
 			// Standard Error: 13_000
 			.saturating_add(Weight::from_ref_time(127_000).saturating_mul(m))
 			// Standard Error: 12_000
@@ -106,7 +106,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	fn close_early_approved(b: u32, m: u32, p: u32, ) -> Weight {
 		Weight::from_ref_time(100_328_000)
 			// Standard Error: 2_000
-			.saturating_add(Weight::from_ref_time(28_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(28_000).saturating_mul(b.into()))
 			// Standard Error: 18_000
 			.saturating_add(Weight::from_ref_time(191_000).saturating_mul(m))
 			// Standard Error: 17_000
@@ -136,7 +136,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 	fn close_approved(b: u32, m: u32, p: u32, ) -> Weight {
 		Weight::from_ref_time(133_170_000)
 			// Standard Error: 2_000
-			.saturating_add(Weight::from_ref_time(20_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(20_000).saturating_mul(b.into()))
 			// Standard Error: 19_000
 			.saturating_add(Weight::from_ref_time(112_000).saturating_mul(m))
 			// Standard Error: 18_000

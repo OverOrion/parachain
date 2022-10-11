@@ -31,12 +31,12 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 	fn remark(b: u32, ) -> Weight {
 		Weight::from_ref_time(4_131_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(1_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(1_000).saturating_mul(b.into()))
 	}
 	fn remark_with_event(b: u32, ) -> Weight {
 		Weight::from_ref_time(4_131_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(4_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(4_000).saturating_mul(b.into()))
 	}
 	// Storage: System Digest (r:1 w:1)
 	// Storage: unknown [0x3a686561707061676573] (r:0 w:1)

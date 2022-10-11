@@ -203,7 +203,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn note_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(88_601_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b.into()))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -211,7 +211,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn note_imminent_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(65_383_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b.into()))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -220,7 +220,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn reap_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(89_493_000)
 			// Standard Error: 0
-			.saturating_add(Weight::from_ref_time(4_000).saturating_mul(b))
+			.saturating_add(Weight::from_ref_time(4_000).saturating_mul(b.into()))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
