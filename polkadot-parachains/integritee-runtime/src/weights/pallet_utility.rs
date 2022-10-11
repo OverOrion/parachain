@@ -33,19 +33,19 @@ impl<T: frame_system::Config> pallet_utility::WeightInfo for WeightInfo<T> {
 		Weight::from_ref_time(245_817_000)
 			// Standard Error: 132_000
 			.saturating_add(Weight::from_ref_time(10_683_000).saturating_mul(c))
-			.saturating_add(T::DbWeight::get().reads(1 as Weight))
+			.saturating_add(T::DbWeight::get().reads(1))
 	}
 	// Storage: Migration Status (r:1 w:0)
 	fn as_derivative() -> Weight {
 		Weight::from_ref_time(17_472_000)
-			.saturating_add(T::DbWeight::get().reads(1 as Weight))
+			.saturating_add(T::DbWeight::get().reads(1))
 	}
 	// Storage: Migration Status (r:1 w:0)
 	fn batch_all(c: u32, ) -> Weight {
 		Weight::from_ref_time(0)
 			// Standard Error: 150_000
 			.saturating_add(Weight::from_ref_time(11_944_000).saturating_mul(c))
-			.saturating_add(T::DbWeight::get().reads(1 as Weight))
+			.saturating_add(T::DbWeight::get().reads(1))
 	}
 	fn dispatch_as() -> Weight {
 		Weight::from_ref_time(59_832_000)
@@ -55,7 +55,7 @@ impl<T: frame_system::Config> pallet_utility::WeightInfo for WeightInfo<T> {
 		Weight::from_ref_time(13_470_000)
 			// Standard Error: 1_000
 			.saturating_add(Weight::from_ref_time(4_229_000).saturating_mul(c))
-			.saturating_add(T::DbWeight::get().reads(1 as Weight))
+			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(1))
 	}
 }
