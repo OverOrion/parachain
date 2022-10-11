@@ -49,21 +49,21 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 	fn set_storage(i: u32, ) -> Weight {
 		Weight::from_ref_time(0)
 			// Standard Error: 26_000
-			.saturating_add(Weight::from_ref_time(1_634_000).saturating_mul(i))
+			.saturating_add(Weight::from_ref_time(1_634_000).saturating_mul(i.into()))
 			.saturating_add(T::DbWeight::get().writes((1 as Weight).saturating_mul(i as Weight)))
 	}
 	// Storage: Skipped Metadata (r:0 w:0)
 	fn kill_storage(i: u32, ) -> Weight {
 		Weight::from_ref_time(0)
 			// Standard Error: 15_000
-			.saturating_add(Weight::from_ref_time(1_038_000).saturating_mul(i))
+			.saturating_add(Weight::from_ref_time(1_038_000).saturating_mul(i.into()))
 			.saturating_add(T::DbWeight::get().writes((1 as Weight).saturating_mul(i as Weight)))
 	}
 	// Storage: Skipped Metadata (r:0 w:0)
 	fn kill_prefix(p: u32, ) -> Weight {
 		Weight::from_ref_time(0)
 			// Standard Error: 28_000
-			.saturating_add(Weight::from_ref_time(4_094_000).saturating_mul(p))
+			.saturating_add(Weight::from_ref_time(4_094_000).saturating_mul(p.into()))
 			.saturating_add(T::DbWeight::get().writes((1 as Weight).saturating_mul(p as Weight)))
 	}
 }
