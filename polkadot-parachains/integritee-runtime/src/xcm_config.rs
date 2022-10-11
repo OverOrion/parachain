@@ -29,7 +29,7 @@ use frame_support::{
 	pallet_prelude::Get,
 	parameter_types,
 	traits::{Everything, Nothing},
-	weights::IdentityFee,
+	weights::{IdentityFee, Weight},
 	RuntimeDebug,
 };
 use frame_system::EnsureRoot;
@@ -316,7 +316,7 @@ parameter_types! {
 }
 
 parameter_types! {
-	pub const BaseXcmWeight: u64 = 100_000_000;
+	pub const BaseXcmWeight: Weight = 100_000_000;
 	pub const MaxAssetsForTransfer: usize = 2;
 }
 
