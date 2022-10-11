@@ -42,7 +42,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn second(s: u32, ) -> Weight {
 		Weight::from_ref_time(94_940_000)
 			// Standard Error: 20_000
-			.saturating_add((447_000 as Weight).saturating_mul(s as Weight))
+			.saturating_add(Weight::from_ref_time(447_000).saturating_mul(s))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -52,7 +52,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn vote_new(r: u32, ) -> Weight {
 		Weight::from_ref_time(126_933_000)
 			// Standard Error: 24_000
-			.saturating_add((603_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(603_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -62,7 +62,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn vote_existing(r: u32, ) -> Weight {
 		Weight::from_ref_time(128_563_000)
 			// Standard Error: 17_000
-			.saturating_add((438_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(438_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -82,7 +82,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn blacklist(p: u32, ) -> Weight {
 		Weight::from_ref_time(185_505_000)
 			// Standard Error: 28_000
-			.saturating_add((756_000 as Weight).saturating_mul(p as Weight))
+			.saturating_add(Weight::from_ref_time(756_000).saturating_mul(p))
 			.saturating_add(T::DbWeight::get().reads(6 as Weight))
 			.saturating_add(T::DbWeight::get().writes(7 as Weight))
 	}
@@ -91,7 +91,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn external_propose(v: u32, ) -> Weight {
 		Weight::from_ref_time(38_254_000)
 			// Standard Error: 3_000
-			.saturating_add((71_000 as Weight).saturating_mul(v as Weight))
+			.saturating_add(Weight::from_ref_time(71_000).saturating_mul(v))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -118,7 +118,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn veto_external(v: u32, ) -> Weight {
 		Weight::from_ref_time(72_042_000)
 			// Standard Error: 9_000
-			.saturating_add((90_000 as Weight).saturating_mul(v as Weight))
+			.saturating_add(Weight::from_ref_time(90_000).saturating_mul(v))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -128,7 +128,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn cancel_proposal(p: u32, ) -> Weight {
 		Weight::from_ref_time(135_481_000)
 			// Standard Error: 23_000
-			.saturating_add((925_000 as Weight).saturating_mul(p as Weight))
+			.saturating_add(Weight::from_ref_time(925_000).saturating_mul(p))
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
 	}
@@ -142,7 +142,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn cancel_queued(r: u32, ) -> Weight {
 		Weight::from_ref_time(80_817_000)
 			// Standard Error: 34_000
-			.saturating_add((2_129_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(2_129_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -152,7 +152,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn on_initialize_base(r: u32, ) -> Weight {
 		Weight::from_ref_time(9_037_000)
 			// Standard Error: 74_000
-			.saturating_add((19_325_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(19_325_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
@@ -166,7 +166,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn on_initialize_base_with_launch_period(r: u32, ) -> Weight {
 		Weight::from_ref_time(24_683_000)
 			// Standard Error: 84_000
-			.saturating_add((19_941_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(19_941_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(5 as Weight))
 			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
@@ -177,7 +177,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn delegate(r: u32, ) -> Weight {
 		Weight::from_ref_time(108_173_000)
 			// Standard Error: 99_000
-			.saturating_add((22_120_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(22_120_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(4 as Weight))
 			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
 			.saturating_add(T::DbWeight::get().writes(4 as Weight))
@@ -188,7 +188,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn undelegate(r: u32, ) -> Weight {
 		Weight::from_ref_time(47_067_000)
 			// Standard Error: 67_000
-			.saturating_add((22_971_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(22_971_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(r as Weight)))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
@@ -203,7 +203,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn note_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(88_601_000)
 			// Standard Error: 0
-			.saturating_add((3_000 as Weight).saturating_mul(b as Weight))
+			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -211,7 +211,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn note_imminent_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(65_383_000)
 			// Standard Error: 0
-			.saturating_add((3_000 as Weight).saturating_mul(b as Weight))
+			.saturating_add(Weight::from_ref_time(3_000).saturating_mul(b))
 			.saturating_add(T::DbWeight::get().reads(1 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -220,7 +220,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn reap_preimage(b: u32, ) -> Weight {
 		Weight::from_ref_time(89_493_000)
 			// Standard Error: 0
-			.saturating_add((4_000 as Weight).saturating_mul(b as Weight))
+			.saturating_add(Weight::from_ref_time(4_000).saturating_mul(b))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(1 as Weight))
 	}
@@ -230,7 +230,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn unlock_remove(r: u32, ) -> Weight {
 		Weight::from_ref_time(71_802_000)
 			// Standard Error: 9_000
-			.saturating_add((160_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(160_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -240,7 +240,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn unlock_set(r: u32, ) -> Weight {
 		Weight::from_ref_time(68_758_000)
 			// Standard Error: 11_000
-			.saturating_add((388_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(388_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(3 as Weight))
 			.saturating_add(T::DbWeight::get().writes(3 as Weight))
 	}
@@ -249,7 +249,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn remove_vote(r: u32, ) -> Weight {
 		Weight::from_ref_time(54_930_000)
 			// Standard Error: 11_000
-			.saturating_add((308_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(308_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
@@ -258,7 +258,7 @@ impl<T: frame_system::Config> pallet_democracy::WeightInfo for WeightInfo<T> {
 	fn remove_other_vote(r: u32, ) -> Weight {
 		Weight::from_ref_time(46_336_000)
 			// Standard Error: 8_000
-			.saturating_add((353_000 as Weight).saturating_mul(r as Weight))
+			.saturating_add(Weight::from_ref_time(353_000).saturating_mul(r))
 			.saturating_add(T::DbWeight::get().reads(2 as Weight))
 			.saturating_add(T::DbWeight::get().writes(2 as Weight))
 	}
