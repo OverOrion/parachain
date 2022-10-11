@@ -40,7 +40,7 @@ impl<T: frame_system::Config> pallet_collective::WeightInfo for WeightInfo<T> {
 			// Standard Error: 134_000
 			.saturating_add(Weight::from_ref_time(38_252_000).saturating_mul(p.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
-			.saturating_add(T::DbWeight::get().reads((1 as Weight).saturating_mul(p.into())))
+			.saturating_add(T::DbWeight::get().reads(Weight::from_ref_time(1).saturating_mul(p.into())))
 			.saturating_add(T::DbWeight::get().writes(2))
 			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(1).saturating_mul(p.into()).ref_time()))
 	}

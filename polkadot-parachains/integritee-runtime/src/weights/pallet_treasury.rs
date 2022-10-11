@@ -65,7 +65,7 @@ impl<T: frame_system::Config> pallet_treasury::WeightInfo for WeightInfo<T> {
 			// Standard Error: 1_609_000
 			.saturating_add(Weight::from_ref_time(138_371_000).saturating_mul(p.into()))
 			.saturating_add(T::DbWeight::get().reads(2))
-			.saturating_add(T::DbWeight::get().reads((3 as Weight).saturating_mul(p.into())))
+			.saturating_add(T::DbWeight::get().reads(Weight::from_ref_time(3).saturating_mul(p.into())))
 			.saturating_add(T::DbWeight::get().writes(2))
 			.saturating_add(T::DbWeight::get().writes(Weight::from_ref_time(3).saturating_mul(p.into()).ref_time()))
 	}
